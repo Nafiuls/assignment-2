@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --p-color: rgba(19, 19, 24, 0.7);
+  --h1-color: #131318;
+  --h1-font-size: 40px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+}
+
+header,
+main {
+  padding: 60px 135px;
+}
+
+.primary-btn {
+  padding: 16px 35px;
+  border-radius: 8px;
+  background: #ff5400;
+  border: none;
+  color: white;
+  font-weight: 700;
+}
+
+/* nav styles */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.logo-title {
+  color: #131318;
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+
+.travel {
+  color: #ff5400;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navigation > li {
+  list-style: none;
+}
+
+.navigation > li > a {
+  text-decoration: none;
+  color: var(--p-color);
+  font-size: 1.12rem;
+  transition: 0.15s;
+}
+
+.orange {
+  color: #ff5400;
+  font-weight: 700;
+  transition: 0.15s;
+}
+
+.orange:hover {
+  color: var(--p-color);
+}
+
+.navigation > li > a:hover {
+  color: #ff5400;
+}
+
+/* banner styles */
+.banner {
+  margin-top: 60px;
+  background-image: linear-gradient(
+      180deg,
+      rgba(19, 19, 24, 0.8) 0%,
+      rgba(19, 19, 24, 0) 100%
+    ),
+    url(/Images/banner\ image.png);
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  padding-top: 105px;
+}
+
+.banner-content {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.banner-title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+}
+
+.banner-content > p {
+  margin-top: 25px;
+  color: white;
+  line-height: 26px;
+}
+
+.banner-input {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  max-width: 920px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 8px;
+  gap: 25px;
+}
+
+.banner-input input,
+select {
+  width: 174px;
+  padding: 16px 0px 16px 16px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  color: var(--p-color);
+}
+
+i {
+  color: white;
+}
+
+@media screen and (max-width: 576px) {
+  header {
+    padding: 20px;
+  }
+
+  .banner {
+   padding: 32px 5px;
+    margin-top: 20px;
+    width: 97%;
+  }
+
+  .banner-content {
+    margin-bottom: 32px;
+  }
+
+  .banner-input,
+  .navigation,
+  nav {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .banner-input input {
+    width: 95%;
+  }
+  select {
+    width: 100%;
+  }
+
+  .logo {
+    flex-direction: row;
+  }
+
+  .banner-title {
+    font-size: 2rem;
+  }
+}
