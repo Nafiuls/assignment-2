@@ -4,6 +4,8 @@
   --p-color: rgba(19, 19, 24, 0.7);
   --h1-color: #131318;
   --h1-font-size: 50px;
+
+  --line-height: 26px;
 }
 
 * {
@@ -15,11 +17,9 @@
 header {
   margin: 60px 135px;
 }
-main{
+main {
   margin: 60px 135px;
-  
 }
-
 
 .primary-btn {
   padding: 16px 35px;
@@ -147,64 +147,84 @@ i {
   color: white;
 }
 
-
-
-
-
 /* popular-tour section */
 
-
-
-.popular-tour-section{
-  margin-top: 100px ;
+.popular-tour-section {
+  margin-top: 100px;
   display: flex;
   justify-content: space-between;
- 
 }
-.tour-content{
- max-width: 575px;
-  
+.tour-content {
+  max-width: 575px;
 }
 
-.tour-img > img{
+.tour-img > img {
   height: 100%;
-  
 }
 
-
-.tour-title{
+.tour-title {
   color: var(--h1-color);
   font-size: 40px;
   font-weight: 800;
   margin-bottom: 25px;
 }
 
-.tour-description{
+.tour-description {
   color: var(--p-color);
- line-height: 26px;
- margin: 25px 0px;
- 
+  line-height: 26px;
+  margin: 25px 0px;
 }
 
-.tour-list{
+.tour-list {
   color: var(--p-color);
   display: flex;
   flex-direction: column;
   row-gap: 25px;
   align-items: center;
   padding-left: 30px;
-  
 
   /* padding-left: 30px; */
- 
-
 }
-
-
 
 /* destination section styles */
 
+.destination-section {
+  margin-top: 100px;
+}
 
+.destination-content {
+  text-align: center;
+}
+
+.destination-title {
+  color: var(--h1-color);
+  font-size: var(--h1-font-size);
+  margin-bottom: 25px;
+}
+
+.destination-description {
+  color: var(--p-color);
+  line-height: var(--line-height);
+  margin-bottom: 50px;
+}
+
+.destination-images > image {
+}
+.destination-images {
+  display: flex;
+  flex: 1;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.images {
+  transition: 0.6s;
+}
+
+.images:hover {
+  transform: scale(1.2);
+}
 
 @media screen and (max-width: 576px) {
   .popular-tour-section,
@@ -223,12 +243,14 @@ i {
   .banner-content {
     margin-bottom: 32px;
   }
+  .destination-images,
   .popular-tour-section,
   .banner-input,
   .navigation,
   nav {
     flex-direction: column;
     gap: 5px;
+    
   }
 
   .banner-input input {
@@ -246,21 +268,30 @@ i {
     font-size: 2rem;
   }
 
-  .tour-title{
+  .destination-title,
+  .tour-title {
     font-size: 25px;
   }
 
-  .tour-description, .tour-list{
+  .destination-description,
+  .tour-description,
+  .tour-list {
     font-size: 16px;
     margin: 16px 0px;
     row-gap: 16px;
   }
 
-  .tour-img{
+  .tour-img {
     margin-top: 25px;
   }
 
-  .tour-img > img{
+  .tour-img > img {
     width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .images{
+    width: 100%;
+    height: 176px;
   }
 }
