@@ -15,10 +15,12 @@
 }
 
 header {
-  margin: 60px 135px;
+  max-width: 1440px;
+  margin: 60px auto;
 }
 main {
-  margin: 60px 135px;
+  max-width: 1440px;
+  margin: 60px auto;
 }
 
 .primary-btn {
@@ -321,7 +323,7 @@ i {
 }
 
 .deals-container {
-  background-image: url(/Images/Group\ 39.png);
+  background-image: url(../Images/Group\ 39.png);
   background-repeat: no-repeat;font-style: normal;
   height: 500px;
   padding: 50px;
@@ -335,7 +337,7 @@ i {
 }
 
 .deals-container-2 {
-  background-image: url(/Images/Group\ 40.png);
+  background-image: url(../Images/Group\ 40.png);
   background-repeat: no-repeat;font-style: normal;
   height: 500px;
   padding: 50px;
@@ -349,7 +351,7 @@ i {
 }
 
 .deals-container-3 {
-  background-image: url(/Images/Group\ 40.png);
+  background-image: url(../Images/Group\ 40.png );
   background-repeat: no-repeat;font-style: normal;
   height: 500px;
   padding: 50px;
@@ -358,7 +360,7 @@ i {
   border-radius: 16px;
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: row-reverse;
   margin-bottom: 20px;
 }
 
@@ -408,11 +410,92 @@ font-weight: 800;
 margin-bottom: 25px;
 }
 
+
+.see-all{
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+/* perfect place section styles */
+
+.perfect-place{
+ 
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.perfect-content{
+  width: 50%;
+}
+
+.perfect-title{
+  color: var(--h1-color);
+  font-size: 2.5rem;
+  font-weight:800 ;
+  line-height: 20px;
+  margin-bottom: 40px;
+
+}
+
+.perfect-description{
+  color: var(--p-color);
+  line-height: var(--line-height);
+  margin-bottom: 25px;
+}
+
+.perfect-content > ul li{
+  margin-bottom: 16px;
+}
+
+
+.perfect-content > ul{
+  padding-left: 30px;
+}
+
+.see-more{
+  margin-top: 50px;
+
+}
+
+.perfect-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 500px;
+  background-image: linear-gradient(180deg, #131318 -31.96%, rgba(19, 19, 24, 0.00) 100%),url(../Images/Group\ 40089.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  }
+
+  .bangladesh{
+    color: white;
+    text-align: center;
+    font-size:24px ;
+    font-weight: 700;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 576px) {
   .popular-tour-section,
   main,
   header {
-    padding: 20px;
+    padding: 0px 20px;
     margin: 0px;
   }
 
@@ -529,4 +612,29 @@ margin-bottom: 25px;
     line-height: 24px;
     margin-bottom: 16px;
   }
+
+  .perfect-place{
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .perfect-img{
+    width: 100%;
+  }
+
+  .perfect-content{
+    width: 100%;
+  }
+
+  .perfect-title{
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .perfect-content > ul {
+    padding-left: 25px;
+  }
+ 
 }
