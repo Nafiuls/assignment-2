@@ -30,7 +30,6 @@ footer {
   padding: 110px 335px;
   margin-top: 200px;
   text-align: center;
- 
 }
 
 .primary-btn {
@@ -45,13 +44,11 @@ footer {
   transition: all 0.15s;
 }
 
-.primary-btn:hover{
-
+.primary-btn:hover {
   background-color: #df4c02;
-
 }
 
-.primary-btn:active{
+.primary-btn:active {
   opacity: 0.6;
 }
 
@@ -232,16 +229,58 @@ i {
   margin-bottom: 50px;
 }
 
-.destination-images {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 25px;
+.image-grid{
+
 }
 
-.images {
+.image-grid{
+  max-width: 1440px;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+  grid-auto-rows: 400px;
+  gap: 16px;
+}
+
+.image-grid > img{
+
   width: 100%;
-  transition: 0.15s;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+
+}
+
+.image-grid > img:hover{
+  transform: scale(1.2);
+}
+
+.maldives{
+  grid-column:span  4;
+}
+
+.indonesia{
+  grid-column: span 4 ;
+}
+
+.srilanka{
+  grid-column: span 2;
+}
+
+.northamerica{
+  grid-column: span 4;
+}
+
+.kashmir{
+  grid-column: span 2;
+}
+
+.bangladesh{
+  grid-column: span 3;
+}
+
+.bandarban{
+  grid-column:span 5 ;
 }
 
 .images:hover {
@@ -578,14 +617,11 @@ hr {
   font-weight: 800;
 }
 
-
-
 /* footer section styles */
 
-
-.logo-footer{
+.logo-footer {
   display: flex;
-  align-items: center ;
+  align-items: center;
   justify-content: center;
   font-size: 32px;
   color: var(--h1-color);
@@ -594,24 +630,20 @@ hr {
   margin-bottom: 25px;
 }
 
-.social-media{
+.social-media {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
 }
 
-
-.footer{
+.footer {
   max-width: 1440px;
   margin: 0px auto;
   text-align: center;
 }
 
-
-
-@media screen and (max-width: 600px)  {
-  
+@media screen and (max-width: 600px) {
   .popular-tour-section,
   main,
   header {
@@ -675,10 +707,7 @@ hr {
     object-fit: cover;
     object-position: center;
   }
-  .images {
-    width: 100%;
-    height: 176px;
-  }
+ 
 
   .card-flex {
     padding: 0;
@@ -774,24 +803,31 @@ hr {
     right: 8.48px;
   }
 
-
-  footer{
+  footer {
     width: auto;
     padding: 20px;
   }
 
-  .logo-footer{
+  .logo-footer {
     font-size: 25px;
     gap: 5px;
   }
 
-
-  .footer-content{
+  .footer-content {
     font-size: 14px;
   }
+
+  .image-grid{
+    grid-template-columns: repeat(2,1fr);
+   grid-template-rows: none;
+    
+  }
+
+  .bandarban,.bangladesh,.maldives,.srilanka,.indonesia,.kashmir,.northamerica{
+    grid-column: span  7;
+    width: 100%;
+  }
+
+ 
 }
 
-
-@media screen and(min-width:600px) and (max-width:990px) {
-  
-}
